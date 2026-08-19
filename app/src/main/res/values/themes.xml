@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Mood" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/mood_primary</item>
+        <item name="colorOnPrimary">@color/mood_on_primary</item>
+        <item name="colorSecondary">@color/mood_secondary</item>
+        <item name="colorSurface">@color/mood_surface</item>
+        <item name="colorSurfaceVariant">@color/mood_surface_variant</item>
+        <item name="colorOnSurface">@color/mood_text_primary</item>
+        <item name="colorOutline">@color/mood_outline</item>
+        <item name="android:windowBackground">@color/mood_background</item>
+        <item name="android:statusBarColor">@color/mood_background</item>
+        <item name="android:navigationBarColor">@color/mood_surface</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="Theme.Mood.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_bluepixel_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.Mood</item>
+    </style>
+
+    <style name="Theme.Mood.Transparent" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

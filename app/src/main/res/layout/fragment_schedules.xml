@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/mood_background" android:orientation="vertical" android:layoutDirection="locale" android:textDirection="locale">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbarSchedules" style="@style/Widget.Mood.Toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" app:navigationIcon="@drawable/ic_back" app:title="@string/schedules_title"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerSchedules" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="false" android:paddingStart="20dp" android:paddingTop="14dp" android:paddingEnd="20dp" android:paddingBottom="96dp"/>
+        <LinearLayout android:id="@+id/layoutEmptySchedules" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="32dp">
+            <ImageView android:layout_width="76dp" android:layout_height="76dp" android:background="@drawable/bg_icon_circle" android:contentDescription="@null" android:padding="19dp" android:src="@drawable/ic_schedule" app:tint="@color/mood_primary"/>
+            <TextView style="@style/TextAppearance.Mood.CardTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/schedules_empty_title"/>
+            <TextView style="@style/TextAppearance.Mood.CardBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:text="@string/schedules_empty_body"/>
+        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton android:id="@+id/fabAddSchedule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|start" android:layout_margin="20dp" android:text="@string/schedule_new" app:icon="@drawable/ic_add"/>
+    </FrameLayout>
+</LinearLayout>

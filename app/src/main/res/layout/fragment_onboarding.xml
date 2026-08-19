@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/mood_background" android:fillViewport="true" android:layoutDirection="locale" android:textDirection="locale">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:orientation="vertical" android:paddingStart="24dp" android:paddingTop="48dp" android:paddingEnd="24dp" android:paddingBottom="32dp">
+        <com.google.android.material.imageview.ShapeableImageView android:layout_width="112dp" android:layout_height="112dp" android:contentDescription="@null" android:scaleType="centerCrop" android:src="@drawable/ic_bluepixel_logo_app" app:shapeAppearanceOverlay="@style/ShapeAppearance.Mood.Circle" app:strokeColor="@color/mood_outline" app:strokeWidth="1dp"/>
+        <TextView style="@style/TextAppearance.Mood.Body" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="@string/onboarding_intro"/>
+        <com.google.android.material.card.MaterialCardView style="@style/Widget.Mood.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/onboarding_quick_title"/>
+                <TextView style="@style/TextAppearance.Mood.CardBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:gravity="start" android:text="@string/onboarding_quick_body"/>
+                <TextView style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:gravity="start" android:text="@string/onboarding_restore_title"/>
+                <TextView style="@style/TextAppearance.Mood.CardBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:gravity="start" android:text="@string/onboarding_restore_body"/>
+                <TextView style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:gravity="start" android:text="@string/onboarding_tools_title"/>
+                <TextView style="@style/TextAppearance.Mood.CardBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:gravity="start" android:text="@string/onboarding_tools_body"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.button.MaterialButton android:id="@+id/buttonStart" style="@style/Widget.Mood.PrimaryButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="26dp" android:text="@string/onboarding_start" app:icon="@drawable/ic_check" app:iconGravity="textStart" app:iconPadding="10dp"/>
+        <TextView style="@style/TextAppearance.Mood.CardBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:gravity="center" android:text="@string/onboarding_privacy"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

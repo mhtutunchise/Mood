@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" style="@style/Widget.Mood.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:layoutDirection="locale" android:textDirection="locale">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:background="@drawable/bg_icon_circle" android:contentDescription="@null" android:padding="12dp" android:src="@drawable/ic_schedule" app:tint="@color/mood_primary"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/textScheduleTitle" style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/placeholder_schedule_sleep"/>
+            <TextView android:id="@+id/textScheduleTime" style="@style/TextAppearance.Mood.CardBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="start" android:text="@string/placeholder_time_2330"/>
+            <TextView android:id="@+id/textScheduleDays" style="@style/TextAppearance.Mood.Badge" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_marginTop="8dp" android:background="@drawable/bg_small_badge" android:gravity="center" android:paddingStart="10dp" android:paddingEnd="10dp" android:text="@string/every_day"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical">
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchScheduleEnabled" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton android:id="@+id/buttonEditSchedule" style="@style/Widget.Mood.IconButton" android:layout_width="44dp" android:layout_height="44dp" android:contentDescription="@string/edit" app:icon="@drawable/ic_edit" app:iconGravity="textStart" app:iconPadding="0dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/buttonDeleteSchedule" style="@style/Widget.Mood.IconButton" android:layout_width="44dp" android:layout_height="44dp" android:layout_marginStart="6dp" android:contentDescription="@string/delete" app:icon="@drawable/ic_delete" app:iconGravity="textStart" app:iconPadding="0dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

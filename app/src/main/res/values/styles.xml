@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Mood.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/mood_text_primary</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Mood.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/mood_text_secondary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextAppearance.Mood.SectionTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/mood_text_primary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Mood.CardTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/mood_text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Mood.CardBody" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/mood_text_secondary</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextAppearance.Mood.Badge" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/mood_primary</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextAppearance.Mood.StatValue" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/mood_primary</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextAppearance.Mood.StatValueSmall" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/mood_text_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextAppearance.Mood.StatLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/mood_text_secondary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextAppearance.Mood.PermissionStatus" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/mood_text_secondary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.Mood.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/mood_surface</item>
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/mood_outline</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.Mood.ClickableCard" parent="Widget.Mood.Card">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.Mood.StatCard" parent="Widget.Mood.Card">
+        <item name="cardCornerRadius">18dp</item>
+    </style>
+
+    <style name="Widget.Mood.PrimaryButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/mood_primary</item>
+        <item name="android:textColor">@color/mood_on_primary</item>
+        <item name="iconTint">@color/mood_on_primary</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">52dp</item>
+    </style>
+
+    <style name="Widget.Mood.TonalButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/mood_surface_variant</item>
+        <item name="android:textColor">@color/mood_primary</item>
+        <item name="iconTint">@color/mood_primary</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Widget.Mood.TextButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="android:textColor">@color/mood_primary</item>
+        <item name="iconTint">@color/mood_primary</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Widget.Mood.DangerButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/mood_error</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.Mood.IconButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/mood_surface_variant</item>
+        <item name="iconTint">@color/mood_primary</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:minWidth">44dp</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Widget.Mood.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/mood_background</item>
+        <item name="titleTextColor">@color/mood_text_primary</item>
+    </style>
+
+    <style
+        name="Widget.Mood.BottomNavigation"
+        parent="Widget.Material3.BottomNavigationView">
+
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:minHeight">72dp</item>
+        <item name="itemIconSize">24dp</item>
+
+    </style>
+    <style
+        name="ShapeAppearance.Mood.Circle"
+        parent="">
+
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+
+    </style>
+    <style name="Widget.Mood.PermissionDot" parent="">
+
+        <item name="android:background">
+            @drawable/permission_dot_selector
+        </item>
+
+    </style>
+
+    <style name="Widget.Mood.WidgetButton" parent="">
+
+        <item name="android:background">
+            @drawable/bg_widget_button
+        </item>
+
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/widget_button_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+
+    </style>
+</resources>

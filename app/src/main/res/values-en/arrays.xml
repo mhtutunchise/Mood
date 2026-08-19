@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="mode_icon_labels">
+        <item>Sleep</item>
+        <item>Meeting</item>
+        <item>Study</item>
+        <item>Outdoor</item>
+        <item>Driving</item>
+        <item>Gym</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="ringer_mode_labels">
+        <item>Unchanged</item>
+        <item>Normal</item>
+        <item>Vibrate</item>
+        <item>Silent</item>
+    </string-array>
+
+    <string-array name="dnd_mode_labels">
+        <item>Unchanged</item>
+        <item>Off</item>
+        <item>Priority only</item>
+        <item>Alarms only</item>
+        <item>Total silence</item>
+    </string-array>
+
+    <string-array name="theme_labels">
+        <item>System default</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="language_labels">
+        <item>Persian</item>
+        <item>English</item>
+    </string-array>
+
+</resources>

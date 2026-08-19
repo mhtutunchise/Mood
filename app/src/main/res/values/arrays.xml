@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mode_icon_labels">
+        <item>خواب</item>
+        <item>جلسه</item>
+        <item>مطالعه</item>
+        <item>بیرون</item>
+        <item>رانندگی</item>
+        <item>باشگاه</item>
+        <item>شخصی</item>
+    </string-array>
+    <string-array name="language_labels">
+        <item>فارسی</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="ringer_mode_labels">
+        <item>بدون تغییر</item>
+        <item>عادی</item>
+        <item>ویبره</item>
+        <item>سکوت</item>
+    </string-array>
+
+    <string-array name="dnd_mode_labels">
+        <item>بدون تغییر</item>
+        <item>خاموش</item>
+        <item>فقط موارد مهم</item>
+        <item>فقط آلارم</item>
+        <item>سکوت کامل</item>
+    </string-array>
+
+    <string-array name="theme_labels">
+        <item>مطابق سیستم</item>
+        <item>روشن</item>
+        <item>تاریک</item>
+    </string-array>
+</resources>

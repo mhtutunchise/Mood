@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="false" android:fillViewport="true" android:layoutDirection="locale" android:textDirection="locale">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="20dp" android:paddingTop="22dp" android:paddingEnd="20dp" android:paddingBottom="30dp">
+        <TextView style="@style/TextAppearance.Mood.Headline" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/home_greeting"/>
+        <TextView style="@style/TextAppearance.Mood.Body" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="start" android:text="@string/home_subtitle"/>
+        <com.google.android.material.card.MaterialCardView style="@style/Widget.Mood.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/layoutNormalMode" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="20dp">
+                    <ImageView android:layout_width="54dp" android:layout_height="54dp" android:background="@drawable/bg_icon_circle" android:contentDescription="@null" android:padding="13dp" android:src="@drawable/ic_mood_normal" app:tint="@color/mood_primary"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/normal_mode"/>
+                        <TextView style="@style/TextAppearance.Mood.CardBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="start" android:text="@string/no_mode_active"/>
+                    </LinearLayout>
+                    <View android:layout_width="10dp" android:layout_height="10dp" android:background="@drawable/bg_status_online"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/layoutActiveMode" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:visibility="gone">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageActiveMode" android:layout_width="54dp" android:layout_height="54dp" android:background="@drawable/bg_custom_icon" android:contentDescription="@null" android:padding="13dp" android:src="@drawable/ic_mode_custom" app:tint="@color/mode_custom"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:id="@+id/textActiveModeName" style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/active_mode_placeholder"/>
+                            <TextView android:id="@+id/textActiveModeTime" style="@style/TextAppearance.Mood.CardBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="start" android:text="@string/remaining_time_placeholder"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/layoutExtendButtons" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/buttonExtend15" style="@style/Widget.Mood.TonalButton" android:layout_width="0dp" android:layout_height="44dp" android:layout_marginEnd="4dp" android:layout_weight="1" android:text="@string/extend_15"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/buttonExtend30" style="@style/Widget.Mood.TonalButton" android:layout_width="0dp" android:layout_height="44dp" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:layout_weight="1" android:text="@string/extend_30"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/buttonExtend60" style="@style/Widget.Mood.TonalButton" android:layout_width="0dp" android:layout_height="44dp" android:layout_marginStart="4dp" android:layout_weight="1" android:text="@string/extend_60"/>
+                    </LinearLayout>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/buttonStopMode" style="@style/Widget.Mood.DangerButton" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="10dp" android:text="@string/stop_and_restore" app:icon="@drawable/ic_stop" app:iconGravity="textStart" app:iconPadding="8dp"/>
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/cardNextSchedule" style="@style/Widget.Mood.ClickableCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <ImageView android:layout_width="44dp" android:layout_height="44dp" android:background="@drawable/bg_icon_circle" android:contentDescription="@null" android:padding="10dp" android:src="@drawable/ic_schedule" app:tint="@color/mood_primary"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/textNextScheduleName" style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/next_schedule"/>
+                    <TextView android:id="@+id/textNextScheduleTime" style="@style/TextAppearance.Mood.CardBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:gravity="start" android:text="@string/tonight"/>
+                </LinearLayout>
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:contentDescription="@null" android:rotation="180" android:src="@drawable/ic_chevron" app:tint="@color/mood_text_secondary"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView style="@style/TextAppearance.Mood.SectionTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="start" android:text="@string/favorite_modes"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/buttonAllModes" style="@style/Widget.Mood.TextButton" android:layout_width="wrap_content" android:layout_height="44dp" android:text="@string/all_modes"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerQuickModes" android:layout_width="match_parent" android:layout_height="154dp" android:layout_marginTop="10dp" android:clipToPadding="false" android:overScrollMode="never"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/buttonCreateMode" style="@style/Widget.Mood.PrimaryButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="18dp" android:text="@string/create_custom_mode" app:icon="@drawable/ic_add" app:iconGravity="textStart" app:iconPadding="10dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

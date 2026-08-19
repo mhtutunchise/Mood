@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/mood_background" android:layoutDirection="locale" android:textDirection="locale" android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbarModeEditor" style="@style/Widget.Mood.Toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" app:navigationIcon="@drawable/ic_back" app:title="@string/new_mode"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="20dp" android:paddingTop="12dp" android:paddingEnd="20dp" android:paddingBottom="32dp">
+            <TextView style="@style/TextAppearance.Mood.SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/editor_mode_details"/>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:hint="@string/mode_name" app:boxBackgroundMode="outline">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/editModeName" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapSentences" android:maxLength="30" android:textDirection="locale"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="@string/editor_description_hint" app:boxBackgroundMode="outline">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/editModeDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapSentences|textMultiLine" android:maxLength="90" android:maxLines="3" android:minLines="2" android:textDirection="locale"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Mood.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/editor_icon"/>
+                    <Spinner android:id="@+id/spinnerVisualType" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:entries="@array/mode_icon_labels" android:gravity="start|center_vertical"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchFavorite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/editor_show_favorites"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView style="@style/TextAppearance.Mood.SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:gravity="start" android:text="@string/editor_sounds"/>
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Mood.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchRing" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/editor_change_ring"/>
+                    <TextView android:id="@+id/textRingValue" style="@style/TextAppearance.Mood.Badge" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_gravity="end" android:background="@drawable/bg_small_badge" android:gravity="center" android:paddingStart="10dp" android:paddingEnd="10dp" android:text="@string/placeholder_50_percent"/>
+                    <com.google.android.material.slider.Slider android:id="@+id/sliderRing" android:layout_width="match_parent" android:layout_height="wrap_content" android:stepSize="1" android:value="50" android:valueFrom="0" android:valueTo="100"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchNotification" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/editor_change_notification"/>
+                    <TextView android:id="@+id/textNotificationValue" style="@style/TextAppearance.Mood.Badge" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_gravity="end" android:background="@drawable/bg_small_badge" android:gravity="center" android:paddingStart="10dp" android:paddingEnd="10dp" android:text="@string/placeholder_50_percent"/>
+                    <com.google.android.material.slider.Slider android:id="@+id/sliderNotification" android:layout_width="match_parent" android:layout_height="wrap_content" android:stepSize="1" android:value="50" android:valueFrom="0" android:valueTo="100"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchMedia" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/editor_change_media"/>
+                    <TextView android:id="@+id/textMediaValue" style="@style/TextAppearance.Mood.Badge" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_gravity="end" android:background="@drawable/bg_small_badge" android:gravity="center" android:paddingStart="10dp" android:paddingEnd="10dp" android:text="@string/placeholder_50_percent"/>
+                    <com.google.android.material.slider.Slider android:id="@+id/sliderMedia" android:layout_width="match_parent" android:layout_height="wrap_content" android:stepSize="1" android:value="50" android:valueFrom="0" android:valueTo="100"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchAlarm" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/editor_change_alarm"/>
+                    <TextView android:id="@+id/textAlarmValue" style="@style/TextAppearance.Mood.Badge" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_gravity="end" android:background="@drawable/bg_small_badge" android:gravity="center" android:paddingStart="10dp" android:paddingEnd="10dp" android:text="@string/placeholder_100_percent"/>
+                    <com.google.android.material.slider.Slider android:id="@+id/sliderAlarm" android:layout_width="match_parent" android:layout_height="wrap_content" android:stepSize="1" android:value="100" android:valueFrom="0" android:valueTo="100"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Mood.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/editor_ringer_mode"/>
+                    <Spinner android:id="@+id/spinnerRingerMode" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:entries="@array/ringer_mode_labels"/>
+                    <TextView style="@style/TextAppearance.Mood.CardTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="start" android:text="@string/dont_disturb"/>
+                    <Spinner android:id="@+id/spinnerDndMode" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:entries="@array/dnd_mode_labels"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView style="@style/TextAppearance.Mood.SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:gravity="start" android:text="@string/editor_display"/>
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Mood.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchBrightness" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/editor_change_brightness"/>
+                    <TextView android:id="@+id/textBrightnessValue" style="@style/TextAppearance.Mood.Badge" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_gravity="end" android:background="@drawable/bg_small_badge" android:gravity="center" android:paddingStart="10dp" android:paddingEnd="10dp" android:text="@string/placeholder_50_percent"/>
+                    <com.google.android.material.slider.Slider android:id="@+id/sliderBrightness" android:layout_width="match_parent" android:layout_height="wrap_content" android:stepSize="1" android:value="50" android:valueFrom="1" android:valueTo="100"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView style="@style/TextAppearance.Mood.SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:gravity="start" android:text="@string/editor_end"/>
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Mood.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <RadioGroup android:id="@+id/radioEndType" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                        <com.google.android.material.radiobutton.MaterialRadioButton android:id="@+id/radioManual" android:layout_width="match_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/manual_end"/>
+                        <com.google.android.material.radiobutton.MaterialRadioButton android:id="@+id/radioDuration" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/editor_end_duration"/>
+                        <com.google.android.material.radiobutton.MaterialRadioButton android:id="@+id/radioClock" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/editor_end_clock"/>
+                    </RadioGroup>
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutDuration" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/editor_duration_hint" android:visibility="gone" app:boxBackgroundMode="outline">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/editDuration" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:maxLength="4" android:text="@string/placeholder_60"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/buttonEndTime" style="@style/Widget.Mood.TonalButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:text="@string/editor_choose_end_time" android:visibility="gone" app:icon="@drawable/ic_schedule" app:iconGravity="textStart"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.button.MaterialButton android:id="@+id/buttonSaveMode" style="@style/Widget.Mood.PrimaryButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="24dp" android:text="@string/editor_save" app:icon="@drawable/ic_check" app:iconGravity="textStart"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/buttonDeleteMode" style="@style/Widget.Mood.TextButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:text="@string/editor_delete" android:textColor="@color/mood_error" android:visibility="gone" app:icon="@drawable/ic_delete" app:iconGravity="textStart" app:iconTint="@color/mood_error"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

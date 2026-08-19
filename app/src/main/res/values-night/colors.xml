@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mood_primary">#AFBBFF</color>
+    <color name="mood_primary_dark">#8799FF</color>
+    <color name="mood_on_primary">#15215D</color>
+    <color name="mood_secondary">#69D9F0</color>
+    <color name="mood_background">#0E1220</color>
+    <color name="mood_surface">#171C2F</color>
+    <color name="mood_surface_variant">#22283D</color>
+    <color name="mood_text_primary">#F3F4FA</color>
+    <color name="mood_text_secondary">#A8AEC0</color>
+    <color name="mood_outline">#30374D</color>
+    <color name="mood_success">#4CD79B</color>
+    <color name="mood_warning">#FFBF67</color>
+    <color name="mood_error">#FF7D8F</color>
+    <color name="mood_error_dark">#D95065</color>
+
+    <color name="mode_sleep">#AFB7FF</color>
+    <color name="mode_sleep_container">#272D50</color>
+    <color name="mode_meeting">#D3A0FA</color>
+    <color name="mode_meeting_container">#382746</color>
+    <color name="mode_study">#65DBAC</color>
+    <color name="mode_study_container">#193A30</color>
+    <color name="mode_outdoor">#FFBD72</color>
+    <color name="mode_outdoor_container">#46321F</color>
+    <color name="mode_drive">#78BAF2</color>
+    <color name="mode_drive_container">#1C354A</color>
+    <color name="mode_gym">#FF98A8</color>
+    <color name="mode_gym_container">#4A2630</color>
+    <color name="mode_custom">#AFBBFF</color>
+    <color name="mode_custom_container">#292F53</color>
+
+    <color name="bottom_nav_selected">#AFBBFF</color>
+    <color name="bottom_nav_unselected">#9299AE</color>
+    <color name="splash_background">#172A72</color>
+
+    <color name="widget_background">#171C30</color>
+    <color name="widget_outline">#30374E</color>
+    <color name="widget_button_background">#222940</color>
+    <color name="widget_button_pressed">#303B68</color>
+    <color name="widget_button_outline">#343C56</color>
+    <color name="widget_button_text">#BCC5FF</color>
+</resources>
